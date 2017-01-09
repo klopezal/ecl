@@ -136,7 +136,7 @@ DataValidator::confidence(uint64_t timestamp)
 		_error_mask |= ERROR_FLAG_TIMEOUT;
 		warnx("******* Inside data validator, time_last = %lld", _time_last);
 		warnx("******* Inside data validator, timestamp = %lld", timestamp);
-		warnx("******* Inside data validator, time_last = %lld", _time_last-timestamp);
+		warnx("******* Inside data validator, difference = %lld", timestamp-_time_last);
 		ret = 0.0f;
 
 	/* we got the exact same sensor value N times in a row */
