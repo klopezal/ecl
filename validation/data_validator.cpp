@@ -134,6 +134,7 @@ DataValidator::confidence(uint64_t timestamp)
 	/* timed out - that's it */
 	} else if (timestamp - _time_last > _timeout_interval) {
 		_error_mask |= ERROR_FLAG_TIMEOUT;
+		warnx("******* Test *******");
 		ret = 0.0f;
 
 	/* we got the exact same sensor value N times in a row */
